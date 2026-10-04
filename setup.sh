@@ -21,7 +21,7 @@ merge_settings() {
 merge_settings '{"advisorModel": "fable"}' || warn "advisor setting failed"
 
 # DevFlow plugin, with the Coordinator as the default output style
-if claude plugin marketplace add enekesabel/dev-flow#coordinator && claude plugin install dev-flow@dev-flow; then
+if claude plugin marketplace add enekesabel/dev-flow && claude plugin install dev-flow@dev-flow; then
   merge_settings '{"outputStyle": "dev-flow:devflow"}' || warn "DevFlow output style failed"
 else
   warn "DevFlow install failed"
